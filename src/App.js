@@ -1,19 +1,26 @@
+import { useEffect, useState } from 'react'
 import './App.css'
-import { useEffect } from 'react'
+import Search from './components/search'
+import ListEmojis from './components/list-emojis'
 import { getAllEmojis } from './services/emojis'
 
 function App () {
+  const [emojis, setEmojis] = useState([])
+
   useEffect(() => {
     handleGetEmojis()
   }, [])
 
   const handleGetEmojis = async () => {
-    const emojis = await getAllEmojis()
-    console.log(emojis)
+    const res = await getAllEmojis()
+    setEmojis(res)
   }
 
   return (
-    <h1>Hello</h1>
+    <div className="App">
+      <Search />
+      <ListEmojis emojis={emojis} />
+    </div>
   )
 }
 

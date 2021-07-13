@@ -1,0 +1,28 @@
+.Search {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto 5rem auto;
+}
+
+.Search-input {
+  padding: .5rem 1rem;
+  width: 100%;
+  border: 1px solid #aaa;
+  font-size: 1rem;
+  border-radius: 5px 0 0 5px;
+}
+
+.Search-title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.Search-btn {
+  border-radius: 0 5px 5px 0;
+}
+
+.Search-box {
+  display: flex;
+  border-radius: 5px;
+}
